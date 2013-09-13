@@ -30,9 +30,15 @@ main(){
     }
 
     //check the input
-    int c;
-    while( (c = getchar()) != EOF )
-        putchar(c);
+    /* int c; */
+    /* while( (c = getchar()) != EOF ) */
+        /* putchar(c); */
+
+    // check the input ,using the for
+    double nc;
+    for (nc = 0;getchar() != EOF ;++nc)
+        ;
+    printf("%.0f\n", nc);
 
 }
 
