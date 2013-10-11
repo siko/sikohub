@@ -1,0 +1,9 @@
+for server 
+
+soapcpp2 add.h
+g++ -g -DWITH_NONAMESPACES -o addserver addserver.cpp soapC.cpp soapServer.cpp stdsoap2.cpp
+
+
+for clinet
+g++ -g -DWITH_NONAMESPACES -o addclient addclient.cpp soapClient.cpp soapC.cpp stdsoap2.cpp
+

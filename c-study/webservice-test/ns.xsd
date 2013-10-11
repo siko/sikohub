@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <schema targetNamespace="urn:add"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns="urn:add"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+  <!-- operation request element -->
+  <element name="add">
+   <complexType>
+    <sequence>
+     <element name="num1" type="xsd:int" minOccurs="1" maxOccurs="1"/><!-- ns__add::num1 -->
+     <element name="num2" type="xsd:int" minOccurs="1" maxOccurs="1"/><!-- ns__add::num2 -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="addResponse">
+   <complexType>
+    <sequence>
+     <element name="sum" type="xsd:int" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__add::sum -->
+    </sequence>
+   </complexType>
+  </element>
+ </schema>
+
