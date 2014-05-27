@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  hello.cpp
+ *       Filename:  quit.cpp
  *
- *    Description:  qt study
+ *    Description:  qt example of quit
  *
  *        Version:  1.0
- *        Created:  11/02/2013 02:53:40 PM
+ *        Created:  11/02/2013 03:02:49 PM
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -16,14 +16,17 @@
  * =====================================================================================
  */
 #include <QApplication>
-#include <QLabel>
+#include <QPushButton>
 
 int main(int argc,char *argv[])
 {
 
     QApplication app(argc,argv);
-    QLabel *label = new QLabel("<h1>Hello Qt!</h1>");
-    label->show();
+    QPushButton *button = new QPushButton("Quit!!");
+    QObject::connect(button,SIGNAL(clicked()),
+            &app,SLOT(quit()));
+    button->show();
     return app.exec();
 
 }
+

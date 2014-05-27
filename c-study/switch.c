@@ -18,12 +18,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-main(void){
+main(){
     /* int fahr; */
+    
     /* say hello,siko! */
-    printf("Hi Siko\n");
-    printf("character: %c\ninter :%d\nfloating point: %f\n", '}', 34, 3.14);
-    printf("%c\n",'a'+1);
+    /* printf("Hi Siko\n"); */
+
     /* check the format */
     /* for(fahr = 0 ;fahr <= 300;fahr = fahr +20){ */
         /* printf("%3d %6.1f\n",fahr,(5.0/9.0)*(fahr-32)); */
@@ -39,8 +39,37 @@ main(void){
     /* for (nc = 0;getchar() != EOF ;++nc) */
         /* ; */
     /* printf("%.0f\n", nc); */
-    return 0;
+    /* int k = 0; */
+    /* int s = 0; */
+    /* while(k <= 3){ */
+        /* printf("before\t%d\t%d",k,s); */
+        /* printf("\n"); */
+        /* [> s = s+k; <] */
+        /* k++; */
+        /* s = s+k; */
+        /* printf("after\t%d\t%d",k,s); */
+        /* printf("\n"); */
 
+    /* } */
+
+    int x, y ,z ;
+    x=0 ; y = 2; z = 3;
+    switch(x)
+    {
+        case 0 : switch(y == 2)
+                 {
+                     case 1 : ( printf ("*") );break;
+                     case 2 : ( printf ("x") );break;
+
+                 }
+        case 1 : switch(z)
+                 {
+                     case 1 : ( printf ("$" ));break;
+                     case 2 : ( printf ("*" ));break;
+                     default: printf("#");
+
+                 }
+    }
 }
 
 

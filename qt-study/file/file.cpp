@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  hello.cpp
+ *       Filename:  file.cpp
  *
- *    Description:  qt study
+ *    Description:  qt file example
  *
  *        Version:  1.0
- *        Created:  11/02/2013 02:53:40 PM
+ *        Created:  05/27/2014 11:02:35 PM
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -15,15 +15,16 @@
  *
  * =====================================================================================
  */
-#include <QApplication>
-#include <QLabel>
+#include <QTextStream>
+#include <QFile>
 
-int main(int argc,char *argv[])
+int main()
 {
 
-    QApplication app(argc,argv);
-    QLabel *label = new QLabel("<h1>Hello Qt!</h1>");
-    label->show();
-    return app.exec();
+   QFile data("myfile");
 
+   if (data.open(QFile::WriteOnly)) {
+     QTextStream out(&data);
+     out << "You make me want to be a better man." << endl;
+   }
 }
