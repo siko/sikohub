@@ -1,7 +1,11 @@
+//refer https://geektutu.com/post/quick-golang.html
+
 package main
 
 import (
+	"errors"
 	"fmt"
+	"os"
 	"reflect"
 )
 
@@ -98,6 +102,47 @@ func main() {
 	}
 	// male
 
+	switch gender {
+	case FEMALE:
+		fmt.Println("female")
+		fallthrough
+	case MALE:
+		fmt.Println("male")
+		fallthrough
+	default:
+		fmt.Println("unknown")
+	}
+	// 输出结果
+	// male
+	// unknown
+	sum := 0
+	for i := 0; i < 10; i++ {
+		if sum > 50 {
+			break
+		}
+		sum += i
+	}
+
+	nums := []int{10, 20, 30, 40}
+	for i, num := range nums {
+		fmt.Println(i, num)
+	}
+	// 0 20
+	// 1 30
+	// 2 40
+
+	for key, value := range m2 {
+		fmt.Println(key, value)
+	}
+	// Sam Male
+	// Alice Female
+	quo, rem := div(100, 17)
+	fmt.Println(quo, rem)        // 5 15
+	fmt.Println(sumnum(100, 17)) // 117
+
+	if err := hello(""); err != nil {
+		fmt.Println(err)
+	}
 }
 
 func add(num int) {
@@ -106,4 +151,32 @@ func add(num int) {
 
 func realAdd(num *int) {
 	*num++
+}
+
+func sumnum(num1 int, num2 int) int {
+	return num1 + num2
+}
+
+func sumnumans(num1 int, num2 int) (ans int) {
+	ans = num1 + num2
+	return
+}
+
+func div(num1 int, num2 int) (int, int) {
+	return num1 / num2, num1 % num2
+}
+
+func readfile() {
+	_, err := os.Open("filename.txt")
+	if err != nil {
+		fmt.Println(err)
+	}
+}
+
+func hello(name string) error {
+	if len(name) == 0 {
+		return errors.New("error: name is null")
+	}
+	fmt.Println("Hello,", name)
+	return nil
 }
