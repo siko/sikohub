@@ -1,4 +1,5 @@
 //refer https://geektutu.com/post/quick-golang.html
+//https://draveness.me/golang-101
 
 package main
 
