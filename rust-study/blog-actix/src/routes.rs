@@ -4,6 +4,7 @@ use actix_web::HttpResponse;
 
 pub(super) mod users;
 pub(super) mod posts;
+pub(super) mod comments;
 
 
 fn convert<T, E>(res: Result<T, E>) -> Result<HttpResponse, AppError>
