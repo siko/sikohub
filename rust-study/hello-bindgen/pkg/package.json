@@ -1,0 +1,13 @@
+{
+  "name": "hello-bindgen",
+  "version": "0.1.0",
+  "files": [
+    "hello_bindgen_bg.wasm",
+    "hello_bindgen.js",
+    "hello_bindgen_bg.js",
+    "hello_bindgen.d.ts"
+  ],
+  "module": "hello_bindgen.js",
+  "types": "hello_bindgen.d.ts",
+  "sideEffects": false
+}
