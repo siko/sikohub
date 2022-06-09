@@ -1,6 +1,4 @@
 from pathlib import Path
-
-from requests import patch
 import plazy
 
 if __name__ == "__main__":
