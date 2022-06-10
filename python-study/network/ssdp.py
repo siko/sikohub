@@ -11,7 +11,7 @@ msg = \
 # Set up UDP socket
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
 s.settimeout(2)
-s.sendto(msg, ('239.255.255.250', 1900) )
+s.sendto(msg, ('239.255.255.250', 1900))
 
 try:
     while True:
