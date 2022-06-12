@@ -28,6 +28,26 @@ fn main() {
 
     let slice = &s[0..len];
     let slice = &s[..];
+
+    let my_string = String::from("hello world");
+
+    // `first_word` 适用于 `String`（的 slice），整体或全部
+    let word = first_word2(&my_string[0..6]);
+    let word = first_word2(&my_string[..]);
+    // `first_word` 也适用于 `String` 的引用，
+    // 这等价于整个 `String` 的 slice
+    let word = first_word2(&my_string);
+
+    let my_string_literal = "hello world";
+
+    // `first_word` 适用于字符串字面值，整体或全部
+    let word = first_word2(&my_string_literal[0..6]);
+    let word = first_word2(&my_string_literal[..]);
+
+    // 因为字符串字面值已经 **是** 字符串 slice 了，
+    // 这也是适用的，无需 slice 语法！
+    let word = first_word2(my_string_literal);
+    
 }
 fn calculate_length(s: &String) -> usize {
     s.len()
@@ -49,7 +69,19 @@ fn first_word(s: &String) -> usize {
     s.len()
 }
 
-fn first_word2(s: &String) -> &str {
+fn first_word2(s: &str) -> &str {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    &s[..]
+}
+
+fn second_word(s: &String) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
