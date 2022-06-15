@@ -6,12 +6,15 @@ rust study
 books
 ----
 
-Rust 官方文档中文翻译 https://rustwiki.org/zh-CN/ 
+Rust [官方文档中文翻译](https://rustwiki.org/zh-CN/)
 
-Rust 程序设计语言 简体中文版  https://rustwiki.org/zh-CN/book/
+Rust 程序设计语言 [简体中文版](https://rustwiki.org/zh-CN/book/) [English]( https://doc.rust-lang.org/book/)
 
-通过例子学 Rust 中文版 https://rustwiki.org/zh-CN/rust-by-example/
+通过例子学Rust [中文版](https://rustwiki.org/zh-CN/rust-by-example/)
 
+Rust [标准库文档中文版](https://rustwiki.org/zh-CN/std/)
+
+Rust [核心库文档中文版](https://rustwiki.org/zh-CN/core/)
 
 tips
 ----
