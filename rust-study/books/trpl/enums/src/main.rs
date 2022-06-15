@@ -18,8 +18,6 @@ fn value_in_cents(coin: Coin) -> u8 {
     }
 }
 
-
-
 fn main() {
     enum IpAddrKind {
         V4,
@@ -83,4 +81,24 @@ fn main() {
     let six = plus_one(five);
     let none = plus_one(None);
 
+    let dice_roll = 9;
+    match dice_roll {
+        3 => add_fancy_hat(),
+        7 => remove_fancy_hat(),
+        _ => reroll(),
+    }
+
+    fn add_fancy_hat() {}
+    fn remove_fancy_hat() {}
+    fn reroll() {}
+
+    let some_u8_value = Some(0u8);
+    match some_u8_value {
+        Some(3) => println!("three"),
+        _ => (),
+    }
+
+    if let Some(3) = some_u8_value {
+        println!("three");
+    }
 }
