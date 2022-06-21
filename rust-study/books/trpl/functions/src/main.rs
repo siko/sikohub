@@ -16,6 +16,27 @@ fn main() {
     let x = plus_one(5);
 
     println!("The value of x is: {}", x);
+
+
+    let mut counter = 1;
+    let mut x = 1;
+    let mut y = 1;
+
+    loop {
+        counter += 1;
+
+        if counter > 10 {
+            break ;
+        }else{
+             
+            let y = plus_prv(x,y);
+        }
+
+        println!("The value of z is: {}", y);
+
+    };
+
+
 }
 
 fn another_function(x: i32) {
@@ -31,5 +52,9 @@ fn five() -> i32 {
 
 fn plus_one(x: i32) -> i32 {
     x + 1
+}
+
+fn plus_prv(x: i32, y:i32) -> i32 {
+    x + y
 }
 
