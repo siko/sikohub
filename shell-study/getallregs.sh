@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the GitHub username
-USERNAME="work-design"
+USERNAME="your_username"
 
 # Make a GET request to the GitHub API to retrieve the user's repositories
 repositories=$(curl -s "https://api.github.com/users/$USERNAME/repos")
