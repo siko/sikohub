@@ -28,10 +28,27 @@ var Size;
 ;
 let mySize = Size.Medium;
 console.log(mySize);
-function calculateTax(income, taxYear) {
+function calculateTax(income, taxYear = 2022) {
     if ((taxYear || 2022) < 2002)
         return income * 1.2;
     return income * 1.3;
 }
 console.log(calculateTax(100).toString());
+let employee = {
+    id: 1,
+    name: '',
+    retire: (date) => {
+        console.log(date);
+    }
+};
+employee.name = 'hi';
+function kgToLbs(weight) {
+    if (typeof weight === 'number') {
+        return weight * 2.2;
+    }
+    else {
+        return parseInt(weight) * 5.5;
+    }
+}
+console.log(kgToLbs(10), kgToLbs('10kg'));
 //# sourceMappingURL=index.js.map
