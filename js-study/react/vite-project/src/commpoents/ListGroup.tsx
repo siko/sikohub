@@ -4,15 +4,15 @@ interface Props {
   heading: string;
 }
 
-function ListGroup(props: Props) {
+function ListGroup({ items, heading }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>
-      <h1>List</h1>
-      {props.items.length === 0 ? <p>No item found</p> : null}
+      <h1>{heading}</h1>
+      {items.length === 0 ? <p>No item found</p> : null}
       <ul className="list-group">
-        {props.items.map((item, index) => (
+        {items.map((item, index) => (
           <li
             className={
               selectedIndex === index
