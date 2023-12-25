@@ -20,3 +20,36 @@ function render(document: any){
     console.log(document);
     
 }
+
+let numbers: number[] = [1, 2, 3];
+
+numbers.forEach(n => n.toString);
+
+
+
+let user: [number, string] = [1, 'hi'];
+
+const small =1;
+const medium = 2;
+const large = 3;
+
+enum Size {Small = 1, Medium , Large };
+
+let mySize: Size = Size.Medium;
+console.log(mySize);
+
+
+function calculateTax(income: number, taxYear: number = 2022): number {
+
+    // let x;
+    
+    if ((taxYear || 2022) <2002)
+        return income * 1.2;
+
+    return income * 1.3;
+    
+}
+
+console.log(calculateTax(100).toString());
+
+
