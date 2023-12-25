@@ -52,12 +52,13 @@ function calculateTax(income: number, taxYear: number = 2022): number {
 
 console.log(calculateTax(100).toString());
 
-
-let employee: {
+type Employee = {
     readonly id: number,
     name: string,
     retire:(date: Date) => void
-} = {
+}
+
+let employee: Employee = {
     id: 1, 
     name: '',
     retire:(date:Date) => {
