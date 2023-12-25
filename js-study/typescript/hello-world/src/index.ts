@@ -83,3 +83,28 @@ function kgToLbs(weight: number | string): number {
 
 console.log(kgToLbs(10),kgToLbs('10kg'));
 
+
+type Draggable = {
+    drag: () => void
+};
+
+type Resizeable = {
+    resize: () => void
+}
+
+type UIWidget = Draggable & Resizeable;
+
+let textBox: UIWidget = {
+
+    drag: () => {},
+    resize: () => {}
+}
+
+type Quantity = 50 | 100;
+
+// let quantity: 50 | 100 = 100;
+// let quantity: number = 100;
+
+let quantity: Quantity = 100;
+
+type Metric = 'cm' | 'inch';
